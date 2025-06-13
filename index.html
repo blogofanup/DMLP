@@ -17,6 +17,21 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Blue-500 equivalent shadow */
         }
+        /* Style for success/error messages */
+        .message-box {
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+        .message-box.success {
+            background-color: #d1fae5; /* green-100 */
+            color: #065f46; /* green-800 */
+        }
+        .message-box.error {
+            background-color: #fee2e2; /* red-100 */
+            color: #991b1b; /* red-800 */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
@@ -145,7 +160,7 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
             <p class="text-lg mb-10 max-w-2xl mx-auto">Fill out the form below to get a free consultation with our digital marketing experts. Let's discuss how we can achieve your goals.</p>
 
-            <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+            <form id="leadForm" class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
                 <div class="mb-6">
                     <label for="name" class="block text-gray-700 text-left text-sm font-medium mb-2">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name"
@@ -165,6 +180,7 @@
                         class="w-full bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
                     Submit for Consultation
                 </button>
+                <div id="form-messages" class="message-box hidden"></div>
             </form>
         </div>
     </section>
@@ -179,6 +195,8 @@
             </div>
         </div>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
