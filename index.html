@@ -160,29 +160,25 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
             <p class="text-lg mb-10 max-w-2xl mx-auto">Fill out the form below to get a free consultation with our digital marketing experts. Let's discuss how we can achieve your goals.</p>
 
-            <form id="leadForm" action="process.php" method="POST" class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-700 text-left text-sm font-medium mb-2">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name"
-                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 text-gray-800 transition duration-200" required>
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-700 text-left text-sm font-medium mb-2">Email</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 text-gray-800 transition duration-200" required>
-                </div>
-                <div class="mb-6">
-                    <label for="message" class="block text-gray-700 text-left text-sm font-medium mb-2">How can we help you?</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your digital marketing needs..."
-                              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 text-gray-800 transition duration-200"></textarea>
-                </div>
-                <button type="submit"
-                        class="w-full bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                    Submit for Consultation
-                </button>
-                <div id="form-messages" class="message-box hidden"></div>
-            </form>
-        </div>
+            <form action="https://formsubmit.co/your@email.com" method="POST" id="leadForm" class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+  <input type="hidden" name="_subject" value="New message from Blog of Anup!">
+  <input type="hidden" name="_autoresponse" value="Hi! 👋 Thanks for reaching out. I’ll get back to you soon. – Anup Ain">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Name</label>
+  <input type="text" id="name" name="name" required class="w-full p-2 mb-4 border rounded">
+
+  <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+  <input type="email" id="email" name="email" required class="w-full p-2 mb-4 border rounded">
+
+  <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message</label>
+  <textarea id="message" name="message" required rows="5" class="w-full p-2 mb-4 border rounded"></textarea>
+
+  <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Send</button>
+</form>
+
+</div>
     </section>
 
     <!-- Footer Section -->
